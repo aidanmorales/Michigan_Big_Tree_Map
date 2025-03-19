@@ -73,8 +73,8 @@ raw_df <- gsheet2tbl(url_new)
 clean_df <- raw_df %>%
   select(
     `Big Tree ID` = 1, Points, Girth, Height, Spread = `Crown Spread`,
-    `National Champion`, `~Scientific Name`, `Common name`, Lat,
-    Long, County, `Observation Date`, Address = 17,
+    `National Champion`, `~Scientific Name`, `Common name`, Latitude,
+    Longitude, County, `Observation Date`, Address = 17,
     `Location Notes` = 13
   ) %>%
   rename(
@@ -86,8 +86,8 @@ clean_df <- raw_df %>%
     height = Height,
     spread = Spread,
     date = `Observation Date`,
-    lat = Lat,
-    lon = Long,
+    lat = Latitude,
+    lon = Longitude,
     notes = `Location Notes`,
     county = County,
     address = Address,
